@@ -10,7 +10,9 @@ FROM
     gross_income, 
 unit_price
        HAVING COUNT(*) > 1;
-       
+      
+      ![01_dupe_1](https://user-images.githubusercontent.com/90646142/136476523-3ef588a2-7dc8-4cca-859a-2815cbdf68fb.png)
+
           
      -- method 2: finding duplicates in table: fact_sales using Common Table Expression
              
