@@ -14,8 +14,6 @@ order by product_select
 
 -- replacing NULL value with the 'No membership' value in table: customer with a COALESCE function
 
-SELECT* from customer;
-
 SELECT* from customer
 WHERE membership is null;
 
