@@ -1,4 +1,4 @@
--- / simple finding duplicates /
+-- simple duplicates lookup
 
 SELECT 
 gross_income, 
@@ -11,7 +11,7 @@ FROM
 unit_price
        HAVING COUNT(*) > 1;
        
-     -- ? simple select with * for duplicates ?
+     --  simple select with * for duplicates 
        
        SELECT *, 
 COUNT(*) AS CNT
@@ -28,9 +28,8 @@ WITH CTE as
    SELECT*, ROW_NUMBER() over (PARTITION BY invoice_id ORDER BY invoice_id) as Duplicates  
    FROM fact_sales  
 )  
-SELECT * FROM CTE;
-
--- WHERE Duplicates > 1;
+SELECT * FROM CTE
+WHERE Duplicates > 1;
 
 
 -- ROW_MUMBER function select
@@ -38,7 +37,7 @@ SELECT * FROM CTE;
    SELECT * FROM (SELECT *, ROW_NUMBER() over (PARTITION BY invoice_id ORDER BY invoice_id) as Duplicates  
    FROM fact_sales) as temp_table WHERE Duplicates >= 1;
  
--- / Deliting duplicates Using the ROW_NUMBER() Function /
+--  Deliting duplicates Using the ROW_NUMBER() Function 
 
  DELETE FROM fact_sales WHERE fact_id IN(
    SELECT fact_id FROM (SELECT fact_id, ROW_NUMBER() 
@@ -46,4 +45,4 @@ SELECT * FROM CTE;
    FROM fact_sales) AS temp_table WHERE Duplicates >1
    );
     
-  select * from fact_sales;     
+  
