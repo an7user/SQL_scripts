@@ -64,7 +64,7 @@ GROUP BY unit_price
 HAVING COUNT(unit_price) >1
 ;
 
--- CTE for same price
+-- CTE for finding the same price
 
 WITH CTE as  
 (  
