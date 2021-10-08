@@ -10,15 +10,16 @@ COUNT(*) AS CNT
 
 FROM
 
-    fact_sales f
-    GROUP BY 
-    gross_income,
-    unit_price
+fact_sales f
+   
+   GROUP BY  
+   gross_income, 
+   unit_price
 
-       HAVING COUNT(*) > 1;
+   HAVING COUNT(*) > 1;
        
 
-![01_dupe_1](https://user-images.githubusercontent.com/90646142/136609539-e9d99c8f-d960-43b8-8f68-a9a30d05d9e9.png)
+![01_dupe_1](https://user-images.githubusercontent.com/90646142/136613543-fd81a3d3-c4c6-47f3-a2e1-d01f0ff64a37.png)
 
 ## method 2: finding duplicates in table: fact_sales using Common Table Expression
              
@@ -34,7 +35,7 @@ SELECT * FROM CTE
 WHERE Duplicates > 1;
 
 
-![02_dupe_2](https://user-images.githubusercontent.com/90646142/136609542-125e3a4c-aad2-4924-9f99-5137af74af11.png)
+![02_dupe_2](https://user-images.githubusercontent.com/90646142/136613545-b503a357-dfa8-42d6-a936-5990d6211312.png)
 
 ## method 3: finding duplicates in table: fact_sales using ROW_MUMBER function
    
@@ -46,7 +47,7 @@ WHERE Duplicates > 1;
  
 
 
-![03_dupe_3](https://user-images.githubusercontent.com/90646142/136609544-612a1901-0213-497f-baef-51886e737fb4.png)
+![03_dupe_3](https://user-images.githubusercontent.com/90646142/136613546-b809509b-714d-4c11-82c8-d2495ee431b0.png)
 
 ## Deliting duplicates from table: fact_sales using the ROW_NUMBER() Function 
 
@@ -61,7 +62,7 @@ WHERE Duplicates > 1;
    
    );
     
-  ![04_dupe_delete](https://user-images.githubusercontent.com/90646142/136609545-bd8b88c7-1929-436e-8481-98c57c396083.png)
+ ![04_dupe_delete](https://user-images.githubusercontent.com/90646142/136613547-d7360f10-8010-4a4a-9f18-9a73700af9fe.png)
   
  ## Double cheking for dupliactes after running the delete script using Common Table Expression
  
@@ -77,7 +78,7 @@ SELECT * FROM CTE
 
 WHERE Duplicates > 1;
   
-![05_dupe_delete_check](https://user-images.githubusercontent.com/90646142/136609546-d5d1b308-acfb-4e63-818a-6bec46e9510d.png)
+![05_dupe_delete_check](https://user-images.githubusercontent.com/90646142/136613549-c23434b9-8b57-4f41-8e52-72020024c79b.png)
 
  ## Double cheking for dupliactes after running the delete script using ROW_MUMBER function
  
@@ -88,7 +89,7 @@ WHERE Duplicates > 1;
    WHERE Duplicates >= 1;
    
              
-![06_dupe_delete_check2](https://user-images.githubusercontent.com/90646142/136609548-3ec3fdca-cdd1-4856-9e09-759b73e93fb2.png)
+![06_dupe_delete_check2](https://user-images.githubusercontent.com/90646142/136613550-47017f73-60a6-4dd7-9f90-60990880368c.png)
 
 ## Using CASE WHEN function to find the best product (highest rating and the price below 30 USD)
 
@@ -114,7 +115,7 @@ order by product_select
 
 ; 
 
-![07_case_when_f](https://user-images.githubusercontent.com/90646142/136609550-0be486a0-35d9-4390-bae3-7056e30e2834.png)
+![07_case_when_f](https://user-images.githubusercontent.com/90646142/136613551-5c87b71f-3c67-4be0-b092-5dedf4873893.png)
 
 ## replacing NULL value with the 'No membership' value in table: customer with a COALESCE function
 
@@ -130,7 +131,7 @@ COALESCE (membership, 'NO MEMBERSHIP') as `UNDEFINED`
 
 from customer;
 
-![08_coalesce_f](https://user-images.githubusercontent.com/90646142/136609552-fd8b92ee-0342-476f-b577-08b3ee27ee31.png)
+![08_coalesce_f](https://user-images.githubusercontent.com/90646142/136613552-c04d7ae0-e2d9-41ab-a104-77b09191cdb7.png)
 
 ## USING NULLIF function to substitute the 'Sports and travel' product line in table: fact_sales with `NULL`
 
@@ -150,7 +151,7 @@ ORDER BY NULLIFIED ASC
 
 ;
 
-![09_nullif](https://user-images.githubusercontent.com/90646142/136609554-5d54087e-c69f-49e3-8f6a-744fb0914209.png)
+![09_nullif](https://user-images.githubusercontent.com/90646142/136613555-3a759cb8-30a2-4ebd-942a-ab4a7fbd5c59.png)
 
 ## Using LEAST function to replace the unit price of all the products with the price above 30 USD
 
@@ -171,7 +172,7 @@ ORDER BY HAPPY_PRICE DESC
 ; 
 
 
-![10_least](https://user-images.githubusercontent.com/90646142/136609555-78108cfd-5e26-4369-88bc-556da7163335.png)
+![10_least](https://user-images.githubusercontent.com/90646142/136613557-49ea6869-7b8e-4772-be8b-ef0d84fa17b3.png)
 
 ## Using GREATEST function to replace the unit price of all the products with the price below 50 USD
 
@@ -191,7 +192,7 @@ ORDER BY INFLATION_PRICE ASC
 
 ; 
 
-![11_GREATEST](https://user-images.githubusercontent.com/90646142/136609556-87df90a2-49de-46a5-b2f3-ce4577861827.png)
+![11_GREATEST](https://user-images.githubusercontent.com/90646142/136613559-694c704c-a437-4581-81cf-91b0012b4b23.png)
 
 ## USING DISTINCT function to find the unique values for the unit price
 
@@ -199,5 +200,5 @@ SELECT distinct unit_price
 
 FROM fact_sales;
 
-![12_distinct](https://user-images.githubusercontent.com/90646142/136609557-b69bc193-936c-41cf-9915-dd839b7ebc7b.png)
+![12_distinct](https://user-images.githubusercontent.com/90646142/136613560-4bb4b18e-2be4-4cd0-9a54-0c9ad92c2f10.png)
 
