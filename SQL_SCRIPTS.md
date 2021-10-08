@@ -12,9 +12,8 @@ FROM
 
     fact_sales f
     GROUP BY 
-    gross_income, 
-
-unit_price
+    gross_income,
+    unit_price
 
        HAVING COUNT(*) > 1;
        
