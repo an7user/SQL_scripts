@@ -1,4 +1,4 @@
-## Method 1: finding duplicates in table: fact_sales using aggregation function COUNT() with Group BY and HAVING clause
+## Method 1. Finding duplicates in table: fact_sales using aggregation function COUNT() with Group BY and HAVING clause
 
 SELECT 
 
