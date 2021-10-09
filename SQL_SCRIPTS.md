@@ -132,7 +132,7 @@ from customer;
 
 ![08_coalesce_f](https://user-images.githubusercontent.com/90646142/136613552-c04d7ae0-e2d9-41ab-a104-77b09191cdb7.png)
 
-## USING NULLIF function to map the 'Sports and travel' product line in table: fact_sales with `NULL`
+## USING NULLIF function to map the 'Sports and travel' product line in table: fact_sales to `NULL` value
 
 SELECT *,
 
@@ -152,7 +152,7 @@ ORDER BY NULLIFIED ASC
 
 ![09_nullif](https://user-images.githubusercontent.com/90646142/136613555-3a759cb8-30a2-4ebd-942a-ab4a7fbd5c59.png)
 
-## Using LEAST function to replace the unit price of all the products with the price above 30 USD
+## Using LEAST function to map the unit price of all the products with the price above 30 USD to 30 USD
 
 SELECT *,
 
@@ -173,7 +173,7 @@ ORDER BY HAPPY_PRICE DESC
 
 ![10_least](https://user-images.githubusercontent.com/90646142/136613557-49ea6869-7b8e-4772-be8b-ef0d84fa17b3.png)
 
-## Using GREATEST function to replace the unit price of all the products with the price below 50 USD
+## Using GREATEST function to map the unit price of all the products with the price below 50 USD to 50 USD
 
 SELECT *,
 
