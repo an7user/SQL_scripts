@@ -95,9 +95,9 @@ WHERE Duplicates > 1;
 
 SELECT *,
 
-case 
+CASE 
 
-when rating > 9.5 and unit_price < 30 then 'Best product'
+WHEN rating > 9.5 and unit_price < 30 then 'Best product'
 
 ELSE 'other'
 
