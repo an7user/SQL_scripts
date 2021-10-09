@@ -21,7 +21,7 @@ fact_sales f
 
 ![01_dupe_1](https://user-images.githubusercontent.com/90646142/136613543-fd81a3d3-c4c6-47f3-a2e1-d01f0ff64a37.png)
 
-## Method 2: finding duplicates in table: fact_sales using Common Table Expression
+## Method 2. Finding duplicates in table: fact_sales using Common Table Expression
              
 WITH CTE as 
 
@@ -37,7 +37,7 @@ WHERE Duplicates > 1;
 
 ![02_dupe_2](https://user-images.githubusercontent.com/90646142/136613545-b503a357-dfa8-42d6-a936-5990d6211312.png)
 
-## Method 3: finding duplicates in table: fact_sales using ROW_MUMBER function
+## Method 3. Finding duplicates in table: fact_sales using ROW_MUMBER function
    
    SELECT * FROM (SELECT *, ROW_NUMBER() over (PARTITION BY invoice_id ORDER BY invoice_id) as Duplicates  
    
