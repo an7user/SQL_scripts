@@ -1,4 +1,4 @@
-## method 1: finding duplicates in table: fact_sales using Group BY and HAVING 
+## method 1: finding duplicates in table: fact_sales using Group BY and HAVING clause
 
 SELECT 
 
