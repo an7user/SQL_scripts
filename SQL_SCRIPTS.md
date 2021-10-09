@@ -117,7 +117,7 @@ order by product_select
 
 ![07_case_when_f](https://user-images.githubusercontent.com/90646142/136613551-5c87b71f-3c67-4be0-b092-5dedf4873893.png)
 
-## Replacing NULL value with the 'No membership' value in table: customer with a COALESCE function
+## Mapping NULL value with the 'No membership' value in table: customer with a COALESCE function
 
 
 SELECT* from customer
@@ -132,7 +132,7 @@ from customer;
 
 ![08_coalesce_f](https://user-images.githubusercontent.com/90646142/136613552-c04d7ae0-e2d9-41ab-a104-77b09191cdb7.png)
 
-## USING NULLIF function to substitute the 'Sports and travel' product line in table: fact_sales with `NULL`
+## USING NULLIF function to map the 'Sports and travel' product line in table: fact_sales with `NULL`
 
 SELECT *,
 
