@@ -152,7 +152,7 @@ ORDER BY NULLIFIED ASC
 
 ![09_nullif](https://user-images.githubusercontent.com/90646142/136613555-3a759cb8-30a2-4ebd-942a-ab4a7fbd5c59.png)
 
-## Using LEAST function to map the unit price of all the products with the price above 30 USD to 30 USD
+## Using LEAST function to map the unit price of all the products with the price above 30 USD to a defaault price of 30 USD
 
 SELECT *,
 
@@ -173,7 +173,7 @@ ORDER BY HAPPY_PRICE DESC
 
 ![10_least](https://user-images.githubusercontent.com/90646142/136613557-49ea6869-7b8e-4772-be8b-ef0d84fa17b3.png)
 
-## Using GREATEST function to map the unit price of all the products with the price below 50 USD to 50 USD
+## Using GREATEST function to map the unit price of all the products with the price below 50 USD to a default price of 50 USD
 
 SELECT *,
 
