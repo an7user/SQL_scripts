@@ -117,7 +117,7 @@ order by product_select
 
 ![07_case_when_f](https://user-images.githubusercontent.com/90646142/136613551-5c87b71f-3c67-4be0-b092-5dedf4873893.png)
 
-## replacing NULL value with the 'No membership' value in table: customer with a COALESCE function
+## Replacing NULL value with the 'No membership' value in table: customer with a COALESCE function
 
 SELECT* from customer;
 
